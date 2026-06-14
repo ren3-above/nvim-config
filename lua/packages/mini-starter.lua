@@ -4,19 +4,20 @@
 vim.pack.add({ 'https://github.com/nvim-mini/mini.starter' })
 
 -- item template
---{ name = "name", action = "action", section = "section" },
+--{ name = 'name', action = 'action', section = 'section' },
 
 local pinned_items = {
-  { name = "Documents",     action = "e ~/docs",                            section = "Pinned Items" },
-  { name = "srcML Tests",   action = "e ~/src/srcML/test/parser/testsuite", section = "Pinned Items" },
-  { name = "Neovim Config", action = "e ~/.config/nvim",                    section = "Pinned Items" },
-  { name = "C++ Graphics",  action = "e ~/src/cpp/lotus/build",             section = "Pinned Items" },
-  { name = "Rust Stuff",    action = "e ~/src/rs/nosk/src",                 section = "Pinned Items" },
+  { name = 'Tasks',         action = 'cd ' .. todo_dir .. ' | Tuxedo',      section = 'Pinned Items' },
+  { name = 'Documents',     action = 'e ~/docs',                            section = 'Pinned Items' },
+  { name = 'srcML Tests',   action = 'e ~/src/srcML/test/parser/testsuite', section = 'Pinned Items' },
+  { name = 'Neovim Config', action = 'e ~/.config/nvim',                    section = 'Pinned Items' },
+  { name = 'C++ Graphics',  action = 'e ~/src/cpp/lotus/build',             section = 'Pinned Items' },
+  { name = 'Rust Stuff',    action = 'e ~/src/rs/nosk/src',                 section = 'Pinned Items' },
 }
 
 -- gets the current time and date
 local function get_time_date()
-  return os.date("Local Time: %H.%M | Current Date: %d-%m-%Y | ")
+  return os.date('Local Time: %H.%M | Current Date: %d-%m-%Y | ')
 end
 
 -- sets footer to include time, date, and seconds elapsed since opening the editor
@@ -61,4 +62,3 @@ starter.setup({
     starter.sections.builtin_actions(),
   },
 })
-
