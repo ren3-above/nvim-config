@@ -34,7 +34,7 @@ local set_footer = (function()
   end))
 
   return function()
-    return get_time_date() .. 'Seconds elapsed: ' .. seconds_elapsed
+    return get_time_date() .. 'Seconds Elapsed: ' .. seconds_elapsed
   end
 end)()
 
