@@ -4,4 +4,3 @@ vim.pack.add({ 'https://github.com/stevearc/oil.nvim' })
 
 local oil = require('oil') -- grab plugin
 oil.setup()                -- setup plugin
-

@@ -5,4 +5,3 @@ require('packages.lsp-config')
 require('packages.mini-starter')
 require('packages.mini-statusline')
 require('packages.tuxedo')
-

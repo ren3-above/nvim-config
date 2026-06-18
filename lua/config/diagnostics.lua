@@ -6,4 +6,3 @@ vim.diagnostic.config({
   virtual_text     = true,  -- show message in line
   severity_sort    = true   -- sort diagnostics by serverity
 })
-

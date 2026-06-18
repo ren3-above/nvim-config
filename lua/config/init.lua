@@ -4,4 +4,3 @@ require('config.keymap')
 require('config.diagnostics')
 require('config.autocmds')
 require('config.lsp')
-

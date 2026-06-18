@@ -22,7 +22,7 @@ opt.incsearch      = true  -- show matches as you type
 
 -- visuals
 opt.relativenumber = true                    -- relative line numbers
-opt.termguicolors  = true                    -- enable 24-bit colors
+opt.termguicolors  = false                   -- enable 24-bit colors
 opt.signcolumn     = 'yes'                   -- left side sign column
 opt.showmatch      = false                   -- highlight matching brackets
 opt.matchtime      = 1                       -- how long to highlight brackets
@@ -59,4 +59,3 @@ opt.clipboard      = 'unnamedplus' -- sync with system clipboard
 opt.splitbelow     = true     -- where horizontal splits open
 opt.splitright     = true     -- where vertical splits open
 opt.splitkeep      = 'screen' -- scroll behaviour on split opening
-

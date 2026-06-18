@@ -11,4 +11,3 @@ tokyonight.setup({
 })
 
 vim.cmd('colorscheme tokyonight') -- set current colorscheme to tokyonight
-
