@@ -33,11 +33,14 @@ vim.keymap.set('t', '<leader>e', [[<C-\><C-n><C-o>]])            -- exit termina
 -- splits
 vim.keymap.set('n', '<leader>vs', ':vs<CR><C-w>h')                 -- create vertical split ('vs' for vertical split)
 vim.keymap.set('n', '<leader>hs', ':split<CR><C-w>k')              -- create hirizontal split ('hs' for horizontal split)
-vim.keymap.set('n', 'H', '<C-w>h')                                 -- move to left split ('H' as in (large) left)
-vim.keymap.set('n', 'J', '<C-w>j')                                 -- move to lower split ('H' as in (large) down)
-vim.keymap.set('n', 'K', '<C-w>k')                                 -- move to upper split ('H' as in (large) up)
-vim.keymap.set('n', 'L', '<C-w>l')                                 -- move to right split ('H' as in (large) right)
-vim.keymap.set('n', '<leader>vi', split_resize_amount .. '<C-w>>') -- increase split width ('vi' as in vertical increase)
-vim.keymap.set('n', '<leader>vd', split_resize_amount .. '<C-w><') -- decrease split width ('vi' as in vertical decrease)
-vim.keymap.set('n', '<leader>hi', split_resize_amount .. '<C-w>+') -- increase split height ('vi' as in horizontal increase)
-vim.keymap.set('n', '<leader>hd', split_resize_amount .. '<C-w>-') -- decrease split height ('vi' as in horizontal increase)
+vim.keymap.set('n', 'H', '<C-w>h')                                 -- move to left split ('H' for (large) left)
+vim.keymap.set('n', 'J', '<C-w>j')                                 -- move to lower split ('J' for (large) down)
+vim.keymap.set('n', 'K', '<C-w>k')                                 -- move to upper split ('K' for (large) up)
+vim.keymap.set('n', 'L', '<C-w>l')                                 -- move to right split ('L' for (large) right)
+vim.keymap.set('n', '<leader>vi', split_resize_amount .. '<C-w>>') -- increase split width ('vi' for vertical increase)
+vim.keymap.set('n', '<leader>vd', split_resize_amount .. '<C-w><') -- decrease split width ('vd' for vertical decrease)
+vim.keymap.set('n', '<leader>hi', split_resize_amount .. '<C-w>+') -- increase split height ('hi' for horizontal increase)
+vim.keymap.set('n', '<leader>hd', split_resize_amount .. '<C-w>-') -- decrease split height ('hd' for horizontal increase)
+
+-- misc.
+vim.keymap.set('n', '<leader>ct', 'a</><ESC>hhh%lveyh%llpl%h') -- close markup tag ('ct' for close tag)
