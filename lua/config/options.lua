@@ -1,12 +1,12 @@
 -- editor options
-local opt      = vim.opt
+local opt          = vim.opt
 
 -- misc.
-opt.number     = true  -- left side number column
-opt.cursorline = true  -- highlight current line
-opt.wrap       = false -- text wraping
-opt.scrolloff  = 8     -- minimum number of lines above/below cursor
-opt.matchpairs = '(:),{:},[:],<:>'
+opt.number         = true              -- left side number column
+opt.cursorline     = true              -- highlight current line
+opt.wrap           = false             -- text wraping
+opt.scrolloff      = 8                 -- minimum number of lines above/below cursor
+opt.matchpairs     = '(:),{:},[:],<:>' -- valid character pairs
 
 -- indentation
 opt.tabstop        = 2     -- <TAB> width

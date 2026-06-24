@@ -1,5 +1,5 @@
 -- simple lsp attach
-local lsp = vim.api.nvim_create_augroup('lsp', {})
+local lsp = vim.api.nvim_create_augroup('lsp', { clear = true })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = lsp,
