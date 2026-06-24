@@ -3,6 +3,9 @@
 -- constants
 local split_resize_amount = 8; -- amount by which splits will be resized by
 
+-- states
+local is_harper_enabled = false
+
 -- leader key
 vim.g.mapleader = ';'
 
@@ -22,6 +25,19 @@ vim.keymap.set('n', '<leader>df', vim.lsp.buf.definition, { desc = 'Go to defini
 vim.keymap.set('n', '<leader>dc', vim.lsp.buf.declaration, { desc = 'Go to declaration' })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, { desc = 'Language format file' })
 vim.keymap.set('n', '<leader>p', vim.diagnostic.open_float, { desc = 'Show full issue' })
+
+local function toggle_harper()
+  if is_harper_enabled then
+    vim.lsp.enable('harper_ls', false)
+    is_harper_enabled = false
+  else
+    vim.lsp.enable('harper_ls')
+    is_harper_enabled = true
+  end
+end
+
+vim.keymap.set('n', '<leader>g', function() toggle_harper() end, { desc = 'Toggle deep grammar checking' })
+
 
 -- terminal emulator
 vim.keymap.set('n', '<leader>t', ':lcd %:p:h<CR>:terminal<CR>i', { desc = 'Open terminal buffer' })

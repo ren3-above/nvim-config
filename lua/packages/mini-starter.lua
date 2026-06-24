@@ -10,6 +10,7 @@ local pinned_items = {
   { name = 'Tasks',         action = 'cd ' .. todo_dir .. ' | Tuxedo',      section = 'Pinned Items' },
   { name = 'Documents',     action = 'e ~/docs',                            section = 'Pinned Items' },
   { name = 'srcML Tests',   action = 'e ~/src/srcML/test/parser/testsuite', section = 'Pinned Items' },
+  { name = 'Grammars',      action = 'e ~/src/grammars',                    section = 'Pinned Items' },
   { name = 'Neovim Config', action = 'e ~/.config/nvim',                    section = 'Pinned Items' },
   { name = 'C++ Graphics',  action = 'e ~/src/cpp/lotus/build',             section = 'Pinned Items' },
   { name = 'Rust Stuff',    action = 'e ~/src/rs/nosk/src',                 section = 'Pinned Items' },
