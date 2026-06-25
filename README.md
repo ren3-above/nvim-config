@@ -1,4 +1,4 @@
-## Ren3's Personal Neovim Configuration ##
+## Ren3's Personal Neovim Configuration
 
 Feel free to snoop and/or yoink!
 

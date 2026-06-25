@@ -1,6 +1,5 @@
 -- provides a custom start menu
 -- documentation: https://nvim-mini.org/mini.nvim/doc/mini-starter.html
-
 vim.pack.add({ 'https://github.com/nvim-mini/mini.starter' })
 
 -- item template
