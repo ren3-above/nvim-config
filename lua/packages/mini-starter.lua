@@ -8,33 +8,30 @@ vim.pack.add({ 'https://github.com/nvim-mini/mini.starter' })
 local pinned_items = {
   { name = 'Tasks',         action = 'cd ' .. todo_dir .. ' | Tuxedo',      section = 'Pinned Items' },
   { name = 'Documents',     action = 'e ~/docs',                            section = 'Pinned Items' },
+  { name = 'Source',        action = 'e ~/src',                             section = 'Pinned Items' },
+  { name = 'Neovim Config', action = 'e ~/.config/nvim',                    section = 'Pinned Items' },
   { name = 'srcML Tests',   action = 'e ~/src/srcML/test/parser/testsuite', section = 'Pinned Items' },
   { name = 'Grammars',      action = 'e ~/src/grammars',                    section = 'Pinned Items' },
-  { name = 'Neovim Config', action = 'e ~/.config/nvim',                    section = 'Pinned Items' },
-  { name = 'C++ Graphics',  action = 'e ~/src/cpp/lotus/build',             section = 'Pinned Items' },
-  { name = 'Rust Stuff',    action = 'e ~/src/rs/nosk/src',                 section = 'Pinned Items' },
 }
 
 -- gets the current time and date
-local function get_time_date()
-  return os.date('Local Time: %H.%M | Current Date: %d-%m-%Y | ')
+local function get_time_and_date()
+  return os.date('Local Time: %H.%M | Current Date: %d-%m-%Y')
 end
 
 -- sets footer to include time, date, and seconds elapsed since opening the editor
 local set_footer = (function()
   local timer = vim.loop.new_timer()
-  local seconds_elapsed = 0
-  timer:start(0, 1000, vim.schedule_wrap(function()
+  timer:start(0, 10000, vim.schedule_wrap(function()
     if vim.bo.filetype ~= 'ministarter' then
       timer:stop()
       return
     end
-    seconds_elapsed = seconds_elapsed + 1
     MiniStarter.refresh()
   end))
 
   return function()
-    return get_time_date() .. 'Seconds Elapsed: ' .. seconds_elapsed
+    return get_time_and_date()
   end
 end)()
 

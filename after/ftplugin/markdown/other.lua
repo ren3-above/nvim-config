@@ -15,6 +15,8 @@ local height           = '80%' -- prose screen height percentage
 
 -- on entering a markdown file
 
+vim.treesitter.start()
+
 local markdown_augroup = vim.api.nvim_create_augroup('markdown', { clear = true })
 
 vim.api.nvim_create_autocmd('BufEnter', {

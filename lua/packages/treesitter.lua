@@ -10,4 +10,5 @@ treesitter.install {
   'cpp',
   'rust',
   'lua',
+  'latex',
 }
